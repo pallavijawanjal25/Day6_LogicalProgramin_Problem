@@ -4,33 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day6_LogicalPrograming
+
+namespace ConsoleAppPracticeBasic_Logical
 {
-    static class Program3_PrimeNumber
+    public static class Prime_Or_Not
     {
-        public static void PrimeNumber()
+        public static void  CheckPrime_Or_Not()
         {
-            Console.Write("Enter a number:");
-            int num = Convert.ToInt32(Console.ReadLine());
-            bool flag = false;
-
-            for (int i = 2; i <= num / 2; i++)
-            {
-                if (num % i == 0 && num != 2)
+            int number = 7;
+            int count = 0;
+            for (int i = 1; i <= number; i++)
+            { 
+             if (number%i==0)
                 {
-                    flag = true;
-                    break;
+                    count++;
                 }
-
             }
-            if (flag)
+            if(count==2)
             {
-                Console.WriteLine("\n\n{0} is not a Prime number", num);
+                Console.WriteLine("Number is Prime");
             }
             else
             {
-                Console.WriteLine("\n\n{0} is a Prime number", num);
+                Console.WriteLine("Number is not Prime");
             }
         }
     }
 }
+
